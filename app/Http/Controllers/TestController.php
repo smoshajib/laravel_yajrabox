@@ -26,18 +26,32 @@ class TestController extends Controller
 // user data
         return Datatables::of(User::query())
 // user data
+
+// row class
         ->setRowClass(function ($user) {
             return $user->id % 2 == 0 ? 'alert-info' : 'alert-danger';
         })
+  // row class
+  // row ID      
         ->setRowId(function ($user) {
             return $user->id;
         })
+// row ID
+
+// row Att
         ->setRowAttr([
             'align' =>'center', 
         ])
+// row Att
+
+// row data
+
         // ->setRowData([
         //     'data-name' => 'row-{{$name}}',
         // ])
+
+   // row data
+        
         ->addColumn('country', '{{$country}}!')
         ->editColumn('edit', function(User $user) {
             return $user->created_at->diffForHumans();
