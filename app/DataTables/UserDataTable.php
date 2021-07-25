@@ -52,7 +52,7 @@ class UserDataTable extends DataTable
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     // ->dom('Bfrtip')
-                    ->orderBy(1);
+                    ->orderBy(1)
                     // ->buttons(
                     //     Button::make('create'),
                     //     Button::make('export'),
@@ -60,6 +60,15 @@ class UserDataTable extends DataTable
                     //     Button::make('reset'),
                     //     Button::make('reload')
                     // );
+                    ->parameters([
+                        'paging' => true,
+                        'searching' => true,
+                        'info' => false,
+                        'searchDelay' => 350,
+                        'language' => [
+                            'url' => url('js/dataTables/language.json')
+                        ],
+                    ]);
     }
 
     /**

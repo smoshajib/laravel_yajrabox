@@ -29,14 +29,14 @@
         <div class="row">
 <div class="col-1" style="margin-top: 45px"></div>
             <div class="col-10" style="margin-top: 45px">
-                {{-- yajrabox html builder useing --}}
+                {{-- yajrabox html builder using --}}
                 {!!$dataTable->table()!!} 
             </div>
 			<div class="col-1" style="margin-top: 45px"></div>
         </div>
     </div>
     
-{{-- yajrabox html builder useing --}}
+{{-- yajrabox html builder using --}}
     {!!$dataTable->scripts()!!}
 
 </body>

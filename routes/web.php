@@ -16,8 +16,10 @@ use App\Http\Controllers\UserController;
 */
 
 
-
+// yajrabox html builder using
 Route::resource('data',UserController::class);
+// yajrabox html builder using
+
 // Route::resource('user', App\Http\Controllers\UserController::class);
 
 // user data
