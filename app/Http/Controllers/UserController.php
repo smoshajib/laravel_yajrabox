@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\DataTables\UserDataTable;
+use App\DataTables\UserDataTableEditor;
 
 class UserController extends Controller
 {
@@ -19,6 +20,10 @@ class UserController extends Controller
         return $dataTable->render('user_view');   
     }
 
+    public function store(UserDataTableEditor $editor)
+    {
+        return $editor->process(request());
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -35,11 +40,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
-
+   
     /**
      * Display the specified resource.
      *

@@ -9,8 +9,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-// create user data table class
-class UserDataTable extends DataTable
+class UsersDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -18,12 +17,10 @@ class UserDataTable extends DataTable
      * @param mixed $query Results from query() method.
      * @return \Yajra\DataTables\DataTableAbstract
      */
-    
     public function dataTable($query)
     {
         return datatables()
             ->eloquent($query)
-            // ->addColumn('action', 'action.view');
             ->editColumn('created_at', function(User $user) {
                 return $user->created_at->diffForHumans();
             });
@@ -48,30 +45,12 @@ class UserDataTable extends DataTable
     public function html()
     {
         return $this->builder()
-                    ->setTableId('user-table')
-                    ->columns($this->getColumns())
-                    ->minifiedAjax()
-                    // ->dom('Bfrtip')
-                    ->orderBy(1)
-                    // ->buttons(
-                    //     Button::make('create'),
-                    //     Button::make('export'),
-                    //     Button::make('print'),
-                    //     Button::make('reset'),
-                    //     Button::make('reload')
-                    // );
-                    ->parameters([
-                        'paging' => true,
-                        'searching' => true,
-                        'info' => false,
-                        'searchDelay' => 350,
-                        'language' => [
-                            'url' => url('js/dataTables/language.json')
-                        ],
-                        // 'drawCallback' => 'function() { alert("Table Draw Callback") }',
-                    ]);
-
-
+        ->setTableId('users-table')
+        ->columns($this->getColumns())
+        ->minifiedAjax()
+        // ->dom('Bfrtip')
+        ->orderBy(1);
+        
     }
 
     /**
@@ -97,9 +76,6 @@ class UserDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'User_' . date('YmdHis');
+        return 'Users_' . date('YmdHis');
     }
-
-
-    
 }

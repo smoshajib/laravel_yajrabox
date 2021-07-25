@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,14 +18,15 @@ use App\Http\Controllers\UserController;
 
 
 // yajrabox html builder using
-Route::resource('data',UserController::class);
+Route::resource('users',UsersController::class);
+Route::get('/data',[UserController::class,'index']);
 // yajrabox html builder using
 
 // Route::resource('user', App\Http\Controllers\UserController::class);
 
 // user data
 Route::get('/',[TestController::class,'index']);
-Route::get('/users',[TestController::class,'getUser'])->name('get.user');
+Route::get('/user',[TestController::class,'getUser'])->name('get.user');
 // user data
 
 

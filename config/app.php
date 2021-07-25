@@ -167,6 +167,8 @@ return [
          */
 
         Yajra\DataTables\DataTablesServiceProvider::class,
+        Yajra\DataTables\ButtonsServiceProvider::class,
+        Yajra\DataTables\EditorServiceProvider::class,
 
         /*
          * Application Service Providers...
