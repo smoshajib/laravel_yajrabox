@@ -25,7 +25,9 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
+                             {{-- add col --}}
                             <th>Country</th>
+                             {{-- add col --}}
                             <th>Edit</th>
                             <th>Action</th>
                         </tr>
@@ -54,9 +56,15 @@ $(document).ready(function() {
             {data: 'name', name: 'name'},
             // {data: 'DT_RowData.data-name', name: 'name'},
             {data: 'email', name: 'email'},
+            // add col
             {data: 'country', name: 'country'},
+            // add col
+            // edit col
             {data: 'edit', name: 'edit'},
+            // edit col
+            //action col
             {data: 'action', name: 'action'},
+            //action col
         ],
         // order: [[1, 'asc']]
     });

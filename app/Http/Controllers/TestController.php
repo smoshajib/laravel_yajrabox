@@ -51,14 +51,24 @@ class TestController extends Controller
         // ])
 
    // row data
-        
+   
+   // add col
         ->addColumn('country', '{{$country}}!')
+   // add col
+
+   // edit col
         ->editColumn('edit', function(User $user) {
             return $user->created_at->diffForHumans();
         })
+    // edit col
+    
+    //edit col with action page
         ->editColumn('action','action')
         ->rawColumns(['action'])
+    //edit col with action page    
+    // remove col    
         // ->removeColumn('id')
+    // remove col
         ->make(true);
     }
 
