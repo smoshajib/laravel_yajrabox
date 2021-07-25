@@ -23,8 +23,9 @@ class TestController extends Controller
     public function getUser()
     {
         // $users = User::select(['id', 'name', 'email']);
-
+// user data
         return Datatables::of(User::query())
+// user data
         ->setRowClass(function ($user) {
             return $user->id % 2 == 0 ? 'alert-info' : 'alert-danger';
         })

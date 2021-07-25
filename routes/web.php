@@ -19,5 +19,7 @@ use App\Http\Controllers\TestController;
 // Route::resource('users',UserController::class);
 // Route::resource('user', App\Http\Controllers\UserController::class);
 
+// user data
 Route::get('/',[TestController::class,'index']);
 Route::get('/users',[TestController::class,'getUser'])->name('get.user');
+// user data

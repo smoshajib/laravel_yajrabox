@@ -43,6 +43,7 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
    
 <script>
+    // user data
 $(document).ready(function() {
     $('#users-table').DataTable({
         processing: true,
@@ -60,6 +61,7 @@ $(document).ready(function() {
         // order: [[1, 'asc']]
     });
 } );
+// user data
 </script>
 </body>
 </html>
