@@ -9,6 +9,7 @@ use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
+// create user data table class
 class UserDataTable extends DataTable
 {
     /**
@@ -17,7 +18,7 @@ class UserDataTable extends DataTable
      * @param mixed $query Results from query() method.
      * @return \Yajra\DataTables\DataTableAbstract
      */
-    // create user data table class
+    
     public function dataTable($query)
     {
         return datatables()
