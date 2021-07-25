@@ -68,6 +68,7 @@ class UserDataTable extends DataTable
                         'language' => [
                             'url' => url('js/dataTables/language.json')
                         ],
+                        'drawCallback' => 'function() { alert("Table Draw Callback") }',
                     ]);
     }
 
