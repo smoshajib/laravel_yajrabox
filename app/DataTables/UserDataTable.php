@@ -23,7 +23,10 @@ class UserDataTable extends DataTable
     {
         return datatables()
             ->eloquent($query)
-            ->addColumn('action', '<button>Delete</button>');
+            // ->addColumn('action', 'action.view');
+            ->editColumn('created_at', function(User $user) {
+                return $user->created_at->diffForHumans();
+            });
     }
 
     /**
@@ -34,7 +37,7 @@ class UserDataTable extends DataTable
      */
     public function query(User $model)
     {
-        return $model->newQuery();
+        return $model->newQuery()->select('id','name','email','country','created_at');
     }
 
     /**
@@ -71,7 +74,7 @@ class UserDataTable extends DataTable
             'name',
             'email',
             'country',
-            'action',
+            'created_at',
         ];
     }
 

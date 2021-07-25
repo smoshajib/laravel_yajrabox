@@ -13,18 +13,11 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function index()
+   
+    public function index(UserDataTable $dataTable)
     {
-        $users=User::all();
-        return view('example1',compact('users'));   
+        return $dataTable->render('user_view');   
     }
-
-
-
-    // public function index(UserDataTable $dataTable)
-    // {
-    //     return $dataTable->render('user_view');   
-    // }
 
     /**
      * Show the form for creating a new resource.
