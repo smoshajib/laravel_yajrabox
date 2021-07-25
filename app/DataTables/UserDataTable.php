@@ -17,6 +17,7 @@ class UserDataTable extends DataTable
      * @param mixed $query Results from query() method.
      * @return \Yajra\DataTables\DataTableAbstract
      */
+    // create user data table class
     public function dataTable($query)
     {
         return datatables()

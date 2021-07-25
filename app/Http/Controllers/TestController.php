@@ -53,7 +53,7 @@ class TestController extends Controller
    // row data
    
    // add col
-        ->addColumn('country', '{{$country}}!')
+        ->addColumn('country', '{{$country}}')
    // add col
 
    // edit col
